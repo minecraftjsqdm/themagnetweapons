@@ -43,8 +43,8 @@ configurations {
 }
 
 dependencies {
-    // 编译期依赖：末地陨铁材质等级，运行期由整合包 mods 目录提供
-    compileOnly files('libs/oremygod-1.1.0.jar')
+    // 无编译期 mod 依赖：oremygod 的三档材质通过反射按类名读取，
+    // 未安装时相关配方由 neoforge:mod_loaded 条件自动跳过。
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {

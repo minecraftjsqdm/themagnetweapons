@@ -27,3 +27,6 @@ runs
 run-data
 
 repo
+
+# local third-party jars (not required to build)
+libs
