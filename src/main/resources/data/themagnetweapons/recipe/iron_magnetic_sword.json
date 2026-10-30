@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "themagnetweapons:magnet_smithing_template"
+  },
+  "base": {
+    "item": "minecraft:iron_sword"
+  },
+  "addition": {
+    "item": "minecraft:lodestone"
+  },
+  "result": {
+    "id": "themagnetweapons:iron_magnetic_sword",
+    "count": 1
+  }
+}

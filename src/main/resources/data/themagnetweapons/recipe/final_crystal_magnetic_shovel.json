@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "themagnetweapons:magnet_smithing_template"
+  },
+  "base": {
+    "item": "oremygod:final_crystal_shovel"
+  },
+  "addition": {
+    "item": "minecraft:lodestone"
+  },
+  "result": {
+    "id": "themagnetweapons:final_crystal_magnetic_shovel",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "oremygod"
+    }
+  ]
+}

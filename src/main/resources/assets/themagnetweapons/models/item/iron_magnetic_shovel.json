@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "themagnetweapons:item/iron_magnetic_shovel"
+  }
+}

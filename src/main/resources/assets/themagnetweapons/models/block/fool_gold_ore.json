@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "themagnetweapons:block/fool_gold_ore_side",
+    "down": "themagnetweapons:block/fool_gold_ore_end",
+    "up": "themagnetweapons:block/fool_gold_ore_end",
+    "north": "themagnetweapons:block/fool_gold_ore_side",
+    "east": "themagnetweapons:block/fool_gold_ore_side",
+    "south": "themagnetweapons:block/fool_gold_ore_side",
+    "west": "themagnetweapons:block/fool_gold_ore_side"
+  }
+}

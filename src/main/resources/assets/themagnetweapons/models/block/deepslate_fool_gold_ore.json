@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "themagnetweapons:block/deepslate_fool_gold_ore_side",
+    "down": "themagnetweapons:block/deepslate_fool_gold_ore_end",
+    "up": "themagnetweapons:block/deepslate_fool_gold_ore_end",
+    "north": "themagnetweapons:block/deepslate_fool_gold_ore_side",
+    "east": "themagnetweapons:block/deepslate_fool_gold_ore_side",
+    "south": "themagnetweapons:block/deepslate_fool_gold_ore_side",
+    "west": "themagnetweapons:block/deepslate_fool_gold_ore_side"
+  }
+}

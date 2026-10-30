@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "themagnetweapons:magnet_smithing_template"
+  },
+  "base": {
+    "item": "minecraft:netherite_sword"
+  },
+  "addition": {
+    "item": "minecraft:lodestone"
+  },
+  "result": {
+    "id": "themagnetweapons:netherite_magnetic_sword",
+    "count": 1
+  }
+}

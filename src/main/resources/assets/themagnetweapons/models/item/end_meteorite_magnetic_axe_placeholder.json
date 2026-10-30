@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "themagnetweapons:item/end_meteorite_magnetic_axe_placeholder"
+  }
+}

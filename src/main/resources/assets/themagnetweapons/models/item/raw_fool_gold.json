@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "themagnetweapons:item/raw_fool_gold"
+  }
+}

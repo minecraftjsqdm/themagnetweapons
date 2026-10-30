@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "themagnetweapons:item/meteorite_magnet_red"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "themagnetweapons:polarity": 1.0
+      },
+      "model": "themagnetweapons:item/meteorite_magnet_blue"
+    }
+  ]
+}

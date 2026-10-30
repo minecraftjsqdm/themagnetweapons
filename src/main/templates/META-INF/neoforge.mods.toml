@@ -1,0 +1,43 @@
+modLoader="javafml"
+
+loaderVersion="${loader_version_range}"
+
+license="${mod_license}"
+
+[[mods]]
+
+modId="${mod_id}"
+
+version="${mod_version}"
+
+displayName="${mod_name}"
+
+authors="${mod_authors}"
+
+credits="Core framework by cu6 (bilibili UP)"
+
+description='''${mod_description}'''
+
+[[mixins]]
+    config="themagnetweapons.mixins.json"
+
+[[dependencies.${mod_id}]]
+    modId="neoforge"
+    type="required"
+    versionRange="${neo_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="oremygod"
+    type="optional"
+    versionRange="[1.1.0,)"
+    ordering="AFTER"
+    side="BOTH"

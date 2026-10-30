@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.homemine.themagnetweapons.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "LocalPlayerMixin",
+    "PlayerModelMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "themagnetweapons:item/change_jade_magnetic_sword"
+  }
+}

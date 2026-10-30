@@ -1,0 +1,224 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "themagnetweapons:item/tool_placeholder"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1
+      },
+      "model": "themagnetweapons:item/iron_magnetic_pickaxe_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 2
+      },
+      "model": "themagnetweapons:item/iron_magnetic_axe_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 3
+      },
+      "model": "themagnetweapons:item/iron_magnetic_sword_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 4
+      },
+      "model": "themagnetweapons:item/iron_magnetic_shovel_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 5
+      },
+      "model": "themagnetweapons:item/iron_magnetic_hoe_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 6
+      },
+      "model": "themagnetweapons:item/golden_magnetic_pickaxe_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 7
+      },
+      "model": "themagnetweapons:item/golden_magnetic_axe_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 8
+      },
+      "model": "themagnetweapons:item/golden_magnetic_sword_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 9
+      },
+      "model": "themagnetweapons:item/golden_magnetic_shovel_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 10
+      },
+      "model": "themagnetweapons:item/golden_magnetic_hoe_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 11
+      },
+      "model": "themagnetweapons:item/diamond_magnetic_pickaxe_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 12
+      },
+      "model": "themagnetweapons:item/diamond_magnetic_axe_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 13
+      },
+      "model": "themagnetweapons:item/diamond_magnetic_sword_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 14
+      },
+      "model": "themagnetweapons:item/diamond_magnetic_shovel_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 15
+      },
+      "model": "themagnetweapons:item/diamond_magnetic_hoe_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 16
+      },
+      "model": "themagnetweapons:item/netherite_magnetic_pickaxe_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 17
+      },
+      "model": "themagnetweapons:item/netherite_magnetic_axe_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 18
+      },
+      "model": "themagnetweapons:item/netherite_magnetic_sword_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 19
+      },
+      "model": "themagnetweapons:item/netherite_magnetic_shovel_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 20
+      },
+      "model": "themagnetweapons:item/netherite_magnetic_hoe_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 21
+      },
+      "model": "themagnetweapons:item/end_meteorite_magnetic_pickaxe_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 22
+      },
+      "model": "themagnetweapons:item/end_meteorite_magnetic_axe_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 23
+      },
+      "model": "themagnetweapons:item/end_meteorite_magnetic_sword_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 24
+      },
+      "model": "themagnetweapons:item/end_meteorite_magnetic_shovel_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 25
+      },
+      "model": "themagnetweapons:item/end_meteorite_magnetic_hoe_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 26
+      },
+      "model": "themagnetweapons:item/change_jade_magnetic_pickaxe_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 27
+      },
+      "model": "themagnetweapons:item/change_jade_magnetic_axe_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 28
+      },
+      "model": "themagnetweapons:item/change_jade_magnetic_sword_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 29
+      },
+      "model": "themagnetweapons:item/change_jade_magnetic_shovel_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 30
+      },
+      "model": "themagnetweapons:item/change_jade_magnetic_hoe_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 31
+      },
+      "model": "themagnetweapons:item/final_crystal_magnetic_pickaxe_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 32
+      },
+      "model": "themagnetweapons:item/final_crystal_magnetic_axe_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 33
+      },
+      "model": "themagnetweapons:item/final_crystal_magnetic_sword_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 34
+      },
+      "model": "themagnetweapons:item/final_crystal_magnetic_shovel_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 35
+      },
+      "model": "themagnetweapons:item/final_crystal_magnetic_hoe_placeholder"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 36
+      },
+      "model": "themagnetweapons:item/magnetic_mace_placeholder"
+    }
+  ]
+}
