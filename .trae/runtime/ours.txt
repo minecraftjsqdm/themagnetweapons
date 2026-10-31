@@ -1,0 +1,320 @@
+﻿javap.exe : ����: �ļ� .trae\runtime\ours_dc\DashController.class �������� DashController
+所在位置 行:15 字符: 1239
++ ... javap.exe'; & $jp -p -c -classpath .trae\runtime\ours_dc DashControll ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (����: �ļ� .trae... DashController:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Compiled from "DashController.java"
+public final class com.homemine.themagnetweapons.server.DashController {
+  private static final double ARRIVE_DISTANCE;
+
+  private static final double MIN_SPEED;
+
+  private static final double MAX_SPEED;
+
+  private static final int STILL_TICKS_WITHOUT_WRIGGLER;
+
+  private static final int STILL_TICKS_WITH_WRIGGLER;
+
+  private static final java.util.Map<java.util.UUID, com.homemine.themagnetweapons.server.DashController$Dash> ACTIVE;
+
+  public static void toggle(net.minecraft.server.level.ServerPlayer);
+    Code:
+       0: getstatic     #1                  // Field ACTIVE:Ljava/util/Map;
+       3: aload_0
+       4: invokevirtual #7                  // Method net/minecraft/server/level/ServerPlayer.getUUID:()Ljava/util/UUID;
+       7: invokeinterface #13,  2           // InterfaceMethod java/util/Map.remove:(Ljava/lang/Object;)Ljava/lang/Object;
+      12: ifnull        20
+      15: aload_0
+      16: invokestatic  #19                 // Method stop:(Lnet/minecraft/server/level/ServerPlayer;)V
+      19: return
+      20: aload_0
+      21: invokestatic  #23                 // Method heldPlaceholder:(Lnet/minecraft/server/level/ServerPlayer;)Lnet/minecraft/world/item/ItemStack;
+      24: astore_1
+      25: aload_1
+      26: ifnonnull     30
+      29: return
+      30: aload_1
+      31: getstatic     #27                 // Field com/homemine/themagnetweapons/ModComponents.THROWN_TOOL:Lnet/neoforged/neoforge/registries/DeferredHolder;
+      34: invokevirtual #33                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+      37: checkcast     #39                 // class net/minecraft/core/component/DataComponentType
+      40: invokevirtual #41                 // Method net/minecraft/world/item/ItemStack.get:(Lnet/minecraft/core/component/DataComponentType;)Ljava/lang/Object;
+      43: checkcast     #46                 // class com/homemine/themagnetweapons/component/ThrownToolData
+      46: astore_2
+      47: aload_2
+      48: ifnull        61
+      51: aload_2
+      52: invokevirtual #48                 // Method com/homemine/themagnetweapons/component/ThrownToolData.entityId:()Ljava/util/UUID;
+      55: invokestatic  #51                 // Method com/homemine/themagnetweapons/server/PickaxeTracker.getTool:(Ljava/util/UUID;)Lcom/homemine/themagnetweapons/entity/ThrownMagneticToolEntity;
+      58: ifnonnull     62
+      61: return
+      62: aload_2
+      63: invokevirtual #57                 // Method com/homemine/themagnetweapons/component/ThrownToolData.tool:()Lnet/minecraft/world/item/ItemStack;
+      66: getstatic     #61                 // Field com/homemine/themagnetweapons/Enchants.WRIGGLER:Lnet/minecraft/resources/ResourceKey;
+      69: invokestatic  #67                 // Method com/homemine/themagnetweapons/Enchants.has:(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/resources/ResourceKey;)Z
+      72: istore_3
+      73: getstatic     #1                  // Field ACTIVE:Ljava/util/Map;
+      76: aload_0
+      77: invokevirtual #7                  // Method net/minecraft/server/level/ServerPlayer.getUUID:()Ljava/util/UUID;
+      80: new           #71                 // class com/homemine/themagnetweapons/server/DashController$Dash
+      83: dup
+      84: aload_2
+      85: invokevirtual #48                 // Method com/homemine/themagnetweapons/component/ThrownToolData.entityId:()Ljava/util/UUID;
+      88: iload_3
+      89: aload_0
+      90: invokevirtual #73                 // Method net/minecraft/server/level/ServerPlayer.position:()Lnet/minecraft/world/phys/Vec3;
+      93: invokespecial #77                 // Method com/homemine/themagnetweapons/server/DashController$Dash."<init>":(Ljava/util/UUID;ZLnet/minecraft/world/phys/Vec3;)V
+      96: invokeinterface #81,  3           // InterfaceMethod java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+     101: pop
+     102: aload_0
+     103: iconst_1
+     104: invokevirtual #85                 // Method net/minecraft/server/level/ServerPlayer.setNoGravity:(Z)V
+     107: aload_0
+     108: invokevirtual #89                 // Method net/minecraft/server/level/ServerPlayer.resetFallDistance:()V
+     111: aload_0
+     112: iconst_1
+     113: putfield      #93                 // Field net/minecraft/server/level/ServerPlayer.hurtMarked:Z
+     116: return
+
+  public static void tick(net.minecraft.server.MinecraftServer);
+    Code:
+       0: getstatic     #1                  // Field ACTIVE:Ljava/util/Map;
+       3: invokeinterface #97,  1           // InterfaceMethod java/util/Map.isEmpty:()Z
+       8: ifeq          12
+      11: return
+      12: aload_0
+      13: invokevirtual #101                // Method net/minecraft/server/MinecraftServer.getPlayerList:()Lnet/minecraft/server/players/PlayerList;
+      16: invokevirtual #107                // Method net/minecraft/server/players/PlayerList.getPlayers:()Ljava/util/List;
+      19: invokeinterface #113,  1          // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+      24: astore_1
+      25: aload_1
+      26: invokeinterface #119,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+      31: ifeq          350
+      34: aload_1
+      35: invokeinterface #124,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+      40: checkcast     #8                  // class net/minecraft/server/level/ServerPlayer
+      43: astore_2
+      44: getstatic     #1                  // Field ACTIVE:Ljava/util/Map;
+      47: aload_2
+      48: invokevirtual #7                  // Method net/minecraft/server/level/ServerPlayer.getUUID:()Ljava/util/UUID;
+      51: invokeinterface #127,  2          // InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+      56: checkcast     #71                 // class com/homemine/themagnetweapons/server/DashController$Dash
+      59: astore_3
+      60: aload_3
+      61: ifnonnull     67
+      64: goto          25
+      67: aload_2
+      68: invokestatic  #23                 // Method heldPlaceholder:(Lnet/minecraft/server/level/ServerPlayer;)Lnet/minecraft/world/item/ItemStack;
+      71: astore        4
+      73: aload         4
+      75: ifnonnull     82
+      78: aconst_null
+      79: goto          99
+      82: aload         4
+      84: getstatic     #27                 // Field com/homemine/themagnetweapons/ModComponents.THROWN_TOOL:Lnet/neoforged/neoforge/registries/DeferredHolder;
+      87: invokevirtual #33                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+      90: checkcast     #39                 // class net/minecraft/core/component/DataComponentType
+      93: invokevirtual #41                 // Method net/minecraft/world/item/ItemStack.get:(Lnet/minecraft/core/component/DataComponentType;)Ljava/lang/Object;
+      96: checkcast     #46                 // class com/homemine/themagnetweapons/component/ThrownToolData
+      99: astore        5
+     101: aload         5
+     103: ifnull        121
+     106: aload         5
+     108: invokevirtual #48                 // Method com/homemine/themagnetweapons/component/ThrownToolData.entityId:()Ljava/util/UUID;
+     111: aload_3
+     112: getfield      #129                // Field com/homemine/themagnetweapons/server/DashController$Dash.targetId:Ljava/util/UUID;
+     115: invokevirtual #133                // Method java/util/UUID.equals:(Ljava/lang/Object;)Z
+     118: ifne          128
+     121: aload_2
+     122: invokestatic  #19                 // Method stop:(Lnet/minecraft/server/level/ServerPlayer;)V
+     125: goto          25
+     128: aload_3
+     129: getfield      #129                // Field com/homemine/themagnetweapons/server/DashController$Dash.targetId:Ljava/util/UUID;
+     132: invokestatic  #51                 // Method com/homemine/themagnetweapons/server/PickaxeTracker.getTool:(Ljava/util/UUID;)Lcom/homemine/themagnetweapons/entity/ThrownMagneticToolEntity;
+     135: astore        6
+     137: aload         6
+     139: ifnull        158
+     142: aload         6
+     144: invokevirtual #139                // Method net/minecraft/world/entity/Entity.isRemoved:()Z
+     147: ifne          158
+     150: aload         6
+     152: invokevirtual #144                // Method net/minecraft/world/entity/Entity.isAlive:()Z
+     155: ifne          165
+     158: aload_2
+     159: invokestatic  #19                 // Method stop:(Lnet/minecraft/server/level/ServerPlayer;)V
+     162: goto          25
+     165: aload         6
+     167: invokevirtual #147                // Method net/minecraft/world/entity/Entity.position:()Lnet/minecraft/world/phys/Vec3;
+     170: aload_2
+     171: invokevirtual #73                 // Method net/minecraft/server/level/ServerPlayer.position:()Lnet/minecraft/world/phys/Vec3;
+     174: invokevirtual #148                // Method net/minecraft/world/phys/Vec3.subtract:(Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/world/phys/Vec3;
+     177: astore        7
+     179: aload         7
+     181: invokevirtual #154                // Method net/minecraft/world/phys/Vec3.length:()D
+     184: dstore        8
+     186: dload         8
+     188: ldc2_w        #158                // double 2.0d
+     191: dcmpg
+     192: ifge          202
+     195: aload_2
+     196: invokestatic  #19                 // Method stop:(Lnet/minecraft/server/level/ServerPlayer;)V
+     199: goto          25
+     202: aload_2
+     203: invokevirtual #73                 // Method net/minecraft/server/level/ServerPlayer.position:()Lnet/minecraft/world/phys/Vec3;
+     206: aload_3
+     207: getfield      #160                // Field com/homemine/themagnetweapons/server/DashController$Dash.lastPos:Lnet/minecraft/world/phys/Vec3;
+     210: invokevirtual #164                // Method net/minecraft/world/phys/Vec3.distanceToSqr:(Lnet/minecraft/world/phys/Vec3;)D
+     213: ldc2_w        #168                // double 1.0E-4d
+     216: dcmpg
+     217: ifge          265
+     220: aload_3
+     221: dup
+     222: getfield      #170                // Field com/homemine/themagnetweapons/server/DashController$Dash.stillTicks:I
+     225: iconst_1
+     226: iadd
+     227: putfield      #170                // Field com/homemine/themagnetweapons/server/DashController$Dash.stillTicks:I
+     230: aload_3
+     231: getfield      #174                // Field com/homemine/themagnetweapons/server/DashController$Dash.wriggler:Z
+     234: ifeq          242
+     237: bipush        40
+     239: goto          244
+     242: bipush        8
+     244: istore        10
+     246: aload_3
+     247: getfield      #170                // Field com/homemine/themagnetweapons/server/DashController$Dash.stillTicks:I
+     250: iload         10
+     252: if_icmple     262
+     255: aload_2
+     256: invokestatic  #19                 // Method stop:(Lnet/minecraft/server/level/ServerPlayer;)V
+     259: goto          25
+     262: goto          270
+     265: aload_3
+     266: iconst_0
+     267: putfield      #170                // Field com/homemine/themagnetweapons/server/DashController$Dash.stillTicks:I
+     270: aload_3
+     271: aload_2
+     272: invokevirtual #73                 // Method net/minecraft/server/level/ServerPlayer.position:()Lnet/minecraft/world/phys/Vec3;
+     275: putfield      #160                // Field com/homemine/themagnetweapons/server/DashController$Dash.lastPos:Lnet/minecraft/world/phys/Vec3;
+     278: aload_3
+     279: getfield      #174                // Field com/homemine/themagnetweapons/server/DashController$Dash.wriggler:Z
+     282: ifne          299
+     285: aload_2
+     286: getfield      #177                // Field net/minecraft/server/level/ServerPlayer.horizontalCollision:Z
+     289: ifeq          299
+     292: aload_2
+     293: invokestatic  #19                 // Method stop:(Lnet/minecraft/server/level/ServerPlayer;)V
+     296: goto          25
+     299: ldc2_w        #180                // double 1.4d
+     302: ldc2_w        #182                // double 0.35d
+     305: dload         8
+     307: ldc2_w        #184                // double 0.5d
+     310: dmul
+     311: invokestatic  #186                // Method java/lang/Math.max:(DD)D
+     314: invokestatic  #192                // Method java/lang/Math.min:(DD)D
+     317: dstore        10
+     319: aload_2
+     320: iconst_1
+     321: invokevirtual #85                 // Method net/minecraft/server/level/ServerPlayer.setNoGravity:(Z)V
+     324: aload_2
+     325: invokevirtual #89                 // Method net/minecraft/server/level/ServerPlayer.resetFallDistance:()V
+     328: aload_2
+     329: aload         7
+     331: invokevirtual #195                // Method net/minecraft/world/phys/Vec3.normalize:()Lnet/minecraft/world/phys/Vec3;
+     334: dload         10
+     336: invokevirtual #198                // Method net/minecraft/world/phys/Vec3.scale:(D)Lnet/minecraft/world/phys/Vec3;
+     339: invokevirtual #202                // Method net/minecraft/server/level/ServerPlayer.setDeltaMovement:(Lnet/minecraft/world/phys/Vec3;)V
+     342: aload_2
+     343: iconst_1
+     344: putfield      #93                 // Field net/minecraft/server/level/ServerPlayer.hurtMarked:Z
+     347: goto          25
+     350: return
+
+  public static void stop(net.minecraft.server.level.ServerPlayer);
+    Code:
+       0: getstatic     #1                  // Field ACTIVE:Ljava/util/Map;
+       3: aload_0
+       4: invokevirtual #7                  // Method net/minecraft/server/level/ServerPlayer.getUUID:()Ljava/util/UUID;
+       7: invokeinterface #13,  2           // InterfaceMethod java/util/Map.remove:(Ljava/lang/Object;)Ljava/lang/Object;
+      12: pop
+      13: aload_0
+      14: getstatic     #206                // Field net/minecraft/world/phys/Vec3.ZERO:Lnet/minecraft/world/phys/Vec3;
+      17: invokevirtual #202                // Method net/minecraft/server/level/ServerPlayer.setDeltaMovement:(Lnet/minecraft/world/phys/Vec3;)V
+      20: aload_0
+      21: iconst_0
+      22: invokevirtual #85                 // Method net/minecraft/server/level/ServerPlayer.setNoGravity:(Z)V
+      25: aload_0
+      26: invokevirtual #89                 // Method net/minecraft/server/level/ServerPlayer.resetFallDistance:()V
+      29: aload_0
+      30: iconst_1
+      31: putfield      #93                 // Field net/minecraft/server/level/ServerPlayer.hurtMarked:Z
+      34: return
+
+  public static void onLogout(net.minecraft.server.level.ServerPlayer);
+    Code:
+       0: getstatic     #1                  // Field ACTIVE:Ljava/util/Map;
+       3: aload_0
+       4: invokevirtual #7                  // Method net/minecraft/server/level/ServerPlayer.getUUID:()Ljava/util/UUID;
+       7: invokeinterface #13,  2           // InterfaceMethod java/util/Map.remove:(Ljava/lang/Object;)Ljava/lang/Object;
+      12: pop
+      13: aload_0
+      14: iconst_0
+      15: invokevirtual #85                 // Method net/minecraft/server/level/ServerPlayer.setNoGravity:(Z)V
+      18: aload_0
+      19: invokevirtual #89                 // Method net/minecraft/server/level/ServerPlayer.resetFallDistance:()V
+      22: aload_0
+      23: iconst_1
+      24: putfield      #93                 // Field net/minecraft/server/level/ServerPlayer.hurtMarked:Z
+      27: return
+
+  public static void clearAll();
+    Code:
+       0: getstatic     #1                  // Field ACTIVE:Ljava/util/Map;
+       3: invokeinterface #209,  1          // InterfaceMethod java/util/Map.clear:()V
+       8: return
+
+  private static net.minecraft.world.item.ItemStack heldPlaceholder(net.minecraft.server.level.ServerPlayer);
+    Code:
+       0: invokestatic  #212                // Method net/minecraft/world/InteractionHand.values:()[Lnet/minecraft/world/InteractionHand;
+       3: astore_1
+       4: aload_1
+       5: arraylength
+       6: istore_2
+       7: iconst_0
+       8: istore_3
+       9: iload_3
+      10: iload_2
+      11: if_icmpge     47
+      14: aload_1
+      15: iload_3
+      16: aaload
+      17: astore        4
+      19: aload_0
+      20: aload         4
+      22: invokevirtual #218                // Method net/minecraft/server/level/ServerPlayer.getItemInHand:(Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/item/ItemStack;
+      25: astore        5
+      27: aload         5
+      29: invokevirtual #222                // Method net/minecraft/world/item/ItemStack.getItem:()Lnet/minecraft/world/item/Item;
+      32: instanceof    #226                // class com/homemine/themagnetweapons/item/ToolPlaceholderItem
+      35: ifeq          41
+      38: aload         5
+      40: areturn
+      41: iinc          3, 1
+      44: goto          9
+      47: aconst_null
+      48: areturn
+
+  private com.homemine.themagnetweapons.server.DashController();
+    Code:
+       0: aload_0
+       1: invokespecial #228                // Method java/lang/Object."<init>":()V
+       4: return
+
+  static {};
+    Code:
+       0: new           #232                // class java/util/concurrent/ConcurrentHashMap
+       3: dup
+       4: invokespecial #234                // Method java/util/concurrent/ConcurrentHashMap."<init>":()V
+       7: putstatic     #1                  // Field ACTIVE:Ljava/util/Map;
+      10: return
+}

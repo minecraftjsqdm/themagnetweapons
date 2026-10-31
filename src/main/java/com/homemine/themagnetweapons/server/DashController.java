@@ -106,11 +106,16 @@ public final class DashController {
     public static void stop(ServerPlayer player) {
         ACTIVE.remove(player.getUUID());
         player.setDeltaMovement(Vec3.ZERO);
+        player.setNoGravity(false);
+        player.resetFallDistance();
         player.hurtMarked = true;
     }
 
     public static void onLogout(ServerPlayer player) {
         ACTIVE.remove(player.getUUID());
+        player.setNoGravity(false);
+        player.resetFallDistance();
+        player.hurtMarked = true;
     }
 
     public static void clearAll() {
