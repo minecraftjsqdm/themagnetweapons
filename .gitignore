@@ -30,3 +30,6 @@ repo
 
 # local third-party jars (not required to build)
 libs
+
+# scratch space for local verification
+.trae/
