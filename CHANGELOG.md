@@ -1,5 +1,24 @@
 # Changelog
 
+## 1.0.1 — 2026-10-31
+
+Two serious bugs found while recording the showcase video, plus two recall
+adjustments.
+
+### Fixes
+- Ending a magnetic dash (or logging out mid-dash) now clears the no-gravity
+  state and the accumulated fall distance. Previously the player could keep
+  floating after the dash ended, and a dash could be turned into fall damage.
+- Removed the old `magnet_smithing_template` crafting recipe (8 redstone + 1 iron
+  ingot). The template is no longer craftable that cheaply and must be obtained
+  through the intended route.
+
+### Changes
+- A thrown weapon that has not hit any block yet now flies straight back with no
+  recall wind-up.
+- Right-clicking a weapon that is already in the recall wind-up or flying back
+  no longer restarts the recall.
+
 ## 1.0.0 — 2026-10-30
 
 First public release.

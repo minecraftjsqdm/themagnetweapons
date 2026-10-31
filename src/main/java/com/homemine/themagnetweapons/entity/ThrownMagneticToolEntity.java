@@ -928,13 +928,19 @@ public class ThrownMagneticToolEntity extends Projectile {
         if (level().isClientSide) {
             return;
         }
+        // 已经在回收前摇或回飞阶段：忽略重复触发，避免反复重置进度。
+        if (customReturning || getRecallPhase() > 0) {
+            return;
+        }
+        // 尚未命中过方块（仍在飞行）的武器直接回飞，不播放前摇。
+        boolean noWindup = !isStuck() && !sliding && !hitBlockSpent;
         sliding = false;
         returnHit.clear();
         setStuck(false);
         setReturning(false);
         customReturning = true;
-        recallTicks = 0;
-        setRecallPhase(1);
+        recallTicks = noWindup ? RECALL_WINDUP_TICKS : 0;
+        setRecallPhase(noWindup ? 2 : 1);
         setNoGravity(true);
         noPhysics = true;
         setDeltaMovement(Vec3.ZERO);
