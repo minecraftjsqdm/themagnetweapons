@@ -105,7 +105,11 @@ public final class DashController {
 
     public static void stop(ServerPlayer player) {
         ACTIVE.remove(player.getUUID());
-        player.setDeltaMovement(Vec3.ZERO);
+        // 空中结束冲刺（收枪、再按一次停下、飞到目标）时保留当前速度与方向作为初速度，
+        // 之后交给原版重力与阻力自然衰减；在地面上则清零，避免落地后继续滑行。
+        if (player.onGround()) {
+            player.setDeltaMovement(Vec3.ZERO);
+        }
         player.setNoGravity(false);
         player.resetFallDistance();
         player.hurtMarked = true;

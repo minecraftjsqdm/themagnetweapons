@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.2 — 2026-11-01
+
+### Fixes
+- Ending a dash while airborne (recalling the tool, pressing attack again, or
+  reaching the tool) now keeps the current speed and direction as the initial
+  velocity after the dash, instead of stopping dead. On the ground the velocity
+  is still cleared so the player does not slide.
+
 ## 1.0.1 — 2026-10-31
 
 Two serious bugs found while recording the showcase video, plus two recall
